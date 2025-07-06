@@ -14,7 +14,3 @@ document.addEventListener("click", function (e) {
     navbarNav.classList.remove("active");
   }
 });
-
-function sum(a, b) {
-  return a + b;
-}
