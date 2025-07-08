@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+/* Set a background color */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #283a1c;
+}
+
+.journey-title h1 {
+  padding: 8rem 7% 1.4rem;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 2.6rem;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timeline-circle {
+  position: absolute;
+  background-color: white;
+  border: 13px solid #ff9f55;
+  left: 36.7rem;
+  margin-top: 50px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Timeline arrows styling */
+.timeline-arrow {
+  position: absolute;
+  fill: #9dc183;
+  color: #9dc183;
+  margin-top: 50px;
+  z-index: 0;
+}
+
+.timeline-arrow#timeline-arrow-left {
+  left: 35rem;
+  transform: rotate(90deg);
+}
+
+.timeline-arrow#timeline-arrow-right {
+  right: 35rem;
+  transform: rotate(270deg);
+}
+
+/* Place the container to the left */
+.left {
+  left: 0%;
+}
+
+/* Remove unused/incomplete styling */
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  border-radius: 6px;
+}
+
+/* Content boxes styling */
+.container.left #journey-desc-left,
+.container.right #journey-desc-right {
+  background-color: #9dc183;
+  color: #000;
+  width: 100%;
+}
+
+.container.left #journey-desc-left {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  position: relative;
+  text-align: justify;
+  padding: 1rem;
+}
+
+.content #content-left,
+.content #content-right {
+  color: #315a39;
+}
+
+/* laptop */
+@media (max-width: 1366px) {
+  .timeline-circle {
+    position: absolute;
+    background-color: white;
+    border: 13px solid #ff9f55;
+    left: 48.8rem;
+    margin-top: 48px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  /* Timeline arrows styling */
+  .timeline-arrow {
+    position: absolute;
+    fill: #9dc183;
+    color: #9dc183;
+    margin-top: 50px;
+    z-index: 0;
+  }
+
+  .timeline-arrow#timeline-arrow-left {
+    left: 46.8rem;
+    transform: rotate(90deg);
+  }
+
+  .timeline-arrow#timeline-arrow-right {
+    right: 46.8rem;
+    transform: rotate(270deg);
+  }
+}
