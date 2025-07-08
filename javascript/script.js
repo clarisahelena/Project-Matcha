@@ -2,8 +2,9 @@
 const navbarNav = document.querySelector(".navbar-nav");
 
 // kalo hamburg menu di klik
-document.querySelector("#hamburger-menu").onclick = () => {
+document.querySelector("#hamburger-menu").onclick = (e) => {
   navbarNav.classList.toggle("active");
+  e.preventDefault();
 };
 
 //klik di luar buat hilangin nav
