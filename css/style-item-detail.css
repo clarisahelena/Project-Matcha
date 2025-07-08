@@ -14,11 +14,12 @@
   position: relative;
   background-color: #e0ffdf;
   color: var(--background);
-  margin: 10% auto;
+  margin: 15% auto;
   padding: 1.2rem;
   border: 1px solid #94c27a;
   width: 70%;
   animation: animateModal 0.5s;
+  border-radius: 1rem;
 }
 
 @keyframes animateModal {
@@ -40,7 +41,7 @@
 
 .modal-content {
   display: flex;
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
 }
 
 .modal-content img {
