@@ -19,11 +19,10 @@
     <!-- css -->
     <link rel="stylesheet" href="css/style-main.css" />
     <link rel="stylesheet" href="css/style-products.css" />
+    <link rel="stylesheet" href="css/style-cart.css" />
     <link rel="stylesheet" href="css/style-form.css" />
     <link rel="stylesheet" href="css/style-item-detail.css" />
-
-    <!-- script-app -->
-    <script src="javascript/script-app.js"></script>
+    <link rel="stylesheet" href="css/our-journey.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -32,14 +31,32 @@
 
       <div class="navbar-nav">
         <a href="index.html">Home</a>
-        <a href="our-journey.html">Our Journey</a>
+        <a href="#our-journey">Our Journey</a>
         <a href="#products">Products</a>
         <a href="#contact">Contact Us</a>
       </div>
 
       <div class="navbar-extra">
         <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="cart"><i data-feather="shopping-cart"></i></a>
+        <div class="cart-container">
+          <a href="#" id="cart"><i data-feather="shopping-cart"></i></a>
+          <span class="cart-count">0</span>
+          <div class="cart-dropdown" id="cart-dropdown">
+            <div class="cart-header">
+              <h3>Shopping Cart</h3>
+            </div>
+            <div class="cart-items" id="cart-items">
+              <p class="empty-cart">Your cart is empty</p>
+            </div>
+            <div class="cart-footer">
+              <div class="cart-total">
+                <strong>Total: IDR <span id="cart-total">0</span></strong>
+              </div>
+              <button class="clear-cart-btn" id="clear-cart">Clear Cart</button>
+              <button class="checkout-btn">Checkout</button>
+            </div>
+          </div>
+        </div>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
     </nav>
@@ -55,11 +72,6 @@
         <a href="#" class="cta">Get Yours!</a>
       </main>
     </section>
-
-    <!-- journey -->
-    <!-- <section id="our journey" class="journey">
-      <h2>Our Journey</h2>
-    </section> -->
 
     <!-- products -->
     <section id="products" class="products">
@@ -266,6 +278,85 @@
               <i data-feather="star" class="star"></i>
             </div>
             <div class="product-price">IDR 35.000 <span>IDR 50.000</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- journey -->
+    <section id="our-journey" class="journey">
+      <div class="journey-title"><h1>Our Journey</h1></div>
+      <div class="matcha-timeline">
+        <div class="matcha-item matcha-left">
+          <div class="matcha-card">
+            <h2>January 2024</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt
+            </p>
+          </div>
+        </div>
+        <div class="matcha-item matcha-right">
+          <div class="matcha-card">
+            <h2>April 2024</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt
+            </p>
+          </div>
+        </div>
+        <div class="matcha-item matcha-left">
+          <div class="matcha-card">
+            <h2>July 2024</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt
+            </p>
+          </div>
+        </div>
+        <div class="matcha-item matcha-right">
+          <div class="matcha-card">
+            <h2>October 2024</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt
+            </p>
+          </div>
+        </div>
+        <div class="matcha-item matcha-left">
+          <div class="matcha-card">
+            <h2>January 2025</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt
+            </p>
+          </div>
+        </div>
+        <div class="matcha-item matcha-right">
+          <div class="matcha-card">
+            <h2>April 2025</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt
+            </p>
+          </div>
+        </div>
+        <div class="matcha-item matcha-left">
+          <div class="matcha-card">
+            <h2>May 2025</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt
+            </p>
+          </div>
+        </div>
+        <div class="matcha-item matcha-right">
+          <div class="matcha-card">
+            <h2>June 2025</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt
+            </p>
           </div>
         </div>
       </div>
